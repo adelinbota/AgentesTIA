@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class Main {
 
-	public static void crearMenu() {
+	public static int crearMenu() {
 		Scanner leer = new Scanner(System.in);
-		int opcion;
+		int opcion=0;
 		do {
 			System.out.println("1. Ver todos los agentes con su información");
 			System.out.println("2. Ver los agentes que ganen más de una cantidad X");
@@ -17,13 +17,14 @@ public class Main {
 			System.out.println("7. Desencriptar toda la información");
 			System.out.println("8. Salir");
 			
-			opcion = leer.nextInt();
-			
-		} while (opcion>0 || opcion<9);
+			try {
+				opcion = leer.nextInt();
+			} catch (Exception e) {
+				System.out.println("Escribe un número de la lista de opciones");
+			}	
+		} while (opcion>8 || opcion<1);
 		
-		if (opcion<1 || opcion>8) {
-			System.out.println("Error, introduce un número correcto de la lista");
-		}
+		return opcion;
 	}
 	
 	public static void main(String[] args) {
