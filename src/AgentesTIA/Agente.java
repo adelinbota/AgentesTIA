@@ -2,10 +2,10 @@ package AgentesTIA;
 
 public class Agente {
 
-	private String nombre;
-	private int edad;
-	private String direccion;
-	private double salario;
+	protected String nombre;
+	protected int edad;
+	protected String direccion;
+	protected double salario;
 	
 	public Agente(String nombre, int edad, String direccion, double salario) {
 		this.nombre = nombre;
@@ -48,8 +48,7 @@ public class Agente {
 
 	@Override
 	public String toString() {
-		return "Agente [nombre=" + nombre + ", edad=" + edad + ", direccion=" + direccion + ", salario=" + salario
-				+ "]";
+		return "nombre=" + nombre + ", edad=" + edad + ", direccion=" + direccion + ", salario=" + salario;
 	}
 
 	
