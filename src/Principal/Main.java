@@ -1,18 +1,11 @@
 package Principal;
 
 import java.util.Scanner;
+import AgentesTIA.*;
+
 
 public class Main {
 
-	public static void mostrarAgentesSueldo(double sueldo, Agente vAgentes[]) {
-		
-		for (Agente a : vAgentes) {
-			if (a.getSalario()>sueldo) {
-				System.out.println(a.toString());
-			}
-		}
-		
-	}
 	
 	public static int crearMenu() {
 		Scanner leer = new Scanner(System.in);
