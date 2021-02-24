@@ -2,6 +2,8 @@ package Utilidades;
 
 import java.util.Scanner;
 
+import AgentesTIA.Agente;
+
 public class Utilidades {
 	public static int crearMenu() {
 		Scanner leer = new Scanner(System.in);
@@ -27,11 +29,22 @@ public class Utilidades {
 		
 		return opcion;
 	}
-	public static void mostrarListaAgentes(AgentesTIA.Agente vAgentes[]) {
-		for (AgentesTIA.Agente a : vAgentes) {
+	public static void mostrarListaAgentes(Agente vAgentes[]) {
+		for (Agente a : vAgentes) {
 			System.out.println(a.toString());
 		}
 		
 		
 	}
+	
+	public static void mostrarAgentesSueldo(double sueldo, Agente vAgentes[]) {
+		
+		for (Agente a : vAgentes) {
+			if (a.getSalario()>sueldo) {
+				System.out.println(a.toString());
+			}
+		}
+		
+	}
+	
 }
