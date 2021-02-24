@@ -3,7 +3,7 @@ package Principal;
 import java.util.Scanner;
 import AgentesTIA.*;
 import Utilidades.Utilidades;
-
+import IODatos.*;
 
 public class Main {
 
@@ -34,9 +34,11 @@ public class Main {
 			Utilidades.crearMenu();
 			break;
 		case 3:
+			IODatos.guardarDatosTexto("Pisos.txt");
 			Utilidades.crearMenu();
 			break;
 		case 4:
+			IODatos.guardarDatosTexto("Armas.txt");
 			Utilidades.crearMenu();
 			break;
 		case 5:

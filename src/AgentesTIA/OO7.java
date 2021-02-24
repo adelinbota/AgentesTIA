@@ -1,6 +1,7 @@
 package AgentesTIA;
 
 import java.util.Arrays;
+import IODatos.IODatos;
 
 public class OO7 extends Agente {
 	
@@ -10,7 +11,7 @@ public class OO7 extends Agente {
 	public OO7(String nombre, int edad, String direccion, double salario, int contador_bajas) {
 		super(nombre, edad, direccion, salario);
 		this.contador_bajas = contador_bajas;
-		//this.vArmas = IODatos.cargarDatosTexto("Armas.txt");
+		this.vArmas = IODatos.cargarDatosTexto("Armas.txt");
 	}
 
 	public int getContador_bajas() {
