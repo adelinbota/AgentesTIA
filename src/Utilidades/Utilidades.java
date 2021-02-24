@@ -3,6 +3,8 @@ package Utilidades;
 import java.util.Scanner;
 
 import AgentesTIA.Agente;
+import AgentesTIA.Espionaje;
+import AgentesTIA.OO7;
 
 public class Utilidades {
 	public static int crearMenu() {
@@ -36,7 +38,6 @@ public class Utilidades {
 		
 		
 	}
-	
 	public static void mostrarAgentesSueldo(double sueldo, Agente vAgentes[]) {
 		
 		for (Agente a : vAgentes) {
@@ -45,6 +46,58 @@ public class Utilidades {
 			}
 		}
 		
+	}
+	public static void altaAgente(Agente vAgente[]) {
+		System.out.println("Introduciremos un nuevo agente");
+		int menu=0;
+		Scanner leer_int = new Scanner(System.in);
+		Scanner leer_string = new Scanner(System.in);
+		Scanner leer_double = new Scanner(System.in);
+		for (Agente a : vAgente) {
+			Scanner leer_menu = new Scanner(System.in);
+			int cont=0;
+			if (a.equals(null)) {
+				System.out.println("para crear un agente de espionaje pulse : 1");
+				System.out.println("para crear un agente de 007 pulse : 2");
+				menu = leer_menu.nextInt();
+				switch (menu) {
+				case 1:
+					String nombreEs, direccionEs;
+					int edadEs;
+					double salarioEs;
+					System.out.println("Dime el nombre");
+					nombreEs = leer_string.nextLine();
+					System.out.println("Dime la edad");
+					edadEs = leer_int.nextInt();
+					System.out.println("Dime la direccion");
+					direccionEs = leer_string.nextLine();
+					System.out.println("Dime el salario");
+					salarioEs = leer_double.nextDouble();
+					vAgente[cont] = new Espionaje(nombreEs, edadEs, direccionEs, salarioEs);
+					break;
+				case 2:
+					String nombreOO7, direccionOO7;
+					int edadOO7, contador_bajasOO7;
+					double salarioOO7;
+					System.out.println("Dime el nombre");
+					nombreOO7 = leer_string.nextLine();
+					System.out.println("Dime la edad");
+					edadOO7 = leer_int.nextInt();
+					System.out.println("Dime la direccion");
+					direccionOO7 = leer_string.nextLine();
+					System.out.println("Dime el salario");
+					salarioOO7 = leer_double.nextDouble();
+					System.out.println("Dime las bajas que ha causado");
+					contador_bajasOO7 = leer_int.nextInt();
+					vAgente[cont] = new OO7(nombreOO7, edadOO7, direccionOO7, salarioOO7, contador_bajasOO7);
+					break;
+
+				default:
+					break;
+				}cont++;
+			}
+			
+		}
 	}
 	
 }
