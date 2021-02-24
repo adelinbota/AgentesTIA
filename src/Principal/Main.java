@@ -45,7 +45,7 @@ public class Main {
 		
 		switch (crearMenu()) {
 		case 1:
-			System.out.println(mostrarListaAgentes());
+			System.out.println(jjajajajaja.mostrarListaAgentes());
 			break;
 		case 2:
 			
