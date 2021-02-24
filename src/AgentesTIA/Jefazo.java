@@ -30,10 +30,4 @@ public class Jefazo extends Agente {
 				"************************************************";
 	}
 	
-	public void buscarAgentePrecio() {
-		
-		if Jefazo.
-		
-	}
-	
 }

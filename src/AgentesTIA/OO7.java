@@ -5,12 +5,12 @@ import java.util.Arrays;
 public class OO7 extends Agente {
 	
 	private int contador_bajas;
-	private String armas[];
+	private String vArmas[];
 	
 	public OO7(String nombre, int edad, String direccion, double salario, int contador_bajas) {
 		super(nombre, edad, direccion, salario);
 		this.contador_bajas = contador_bajas;
-	//	this.armas = armas;
+		//this.vArmas = IODatos.cargarDatosTexto("Armas.txt");
 	}
 
 	public int getContador_bajas() {
@@ -22,16 +22,13 @@ public class OO7 extends Agente {
 	}
 
 	public String[] getArmas() {
-		return armas;
+		return vArmas;
 	}
 
-	public void setArmas(String[] armas) {
-		this.armas = armas;
-	}
 
 	@Override
 	public String toString() {
-		return "OO7 [ " + super.toString() + ", contador_bajas=" + contador_bajas + ", armas=" + Arrays.toString(armas) + "]";
+		return "OO7 [ " + super.toString() + ", contador_bajas=" + contador_bajas + ", armas=" + Arrays.toString(vArmas) + "]";
 	}
 	
 	
