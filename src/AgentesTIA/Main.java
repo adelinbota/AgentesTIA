@@ -4,7 +4,15 @@ import java.util.Scanner;
 
 public class Main {
 
-
+	public static void mostrarAgentesSueldo(double sueldo, Agente vAgentes[]) {
+		
+		for (Agente a : vAgentes) {
+			if (a.getSalario()>sueldo) {
+				System.out.println(a.toString());
+			}
+		}
+		
+	}
 	
 	public static int crearMenu() {
 		Scanner leer = new Scanner(System.in);
@@ -35,6 +43,12 @@ public class Main {
 
 		System.out.println("BIENVENIDOS A LA GESTIÓN DE ESPIONAJE ADELIN_FACED");
 		System.out.println("Aquí te presentamos un menú para que elijas la opción que quieras");
+		Agente vAgente[] = new Agente[10];
+		vAgente[0] = new Jefazo("Luis Suarez", 34, "C/Neptuno nº 9", 3500, 10);
+		vAgente[1] = new Espionaje("Vinicius JR", 20, "C/Cibeles nº 20", 950);
+		vAgente[2] = new OO7("Haaland", 20, "C/Dortmund nº 9", 1500, 25);
+		vAgente[3] = new OO7("Braithwaite", 29, "C/Barcelona nº 9", 800, 5);
+		
 		
 		switch (crearMenu()) {
 		case 1:
