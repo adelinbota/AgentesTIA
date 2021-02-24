@@ -40,9 +40,11 @@ public class Main {
 			Utilidades.crearMenu();
 			break;
 		case 5:
+			Utilidades.altaAgente(vAgente);
 			Utilidades.crearMenu();
 			break;
 		case 6:
+			
 			Utilidades.crearMenu();
 			break;
 		case 7:
