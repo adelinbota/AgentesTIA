@@ -1,11 +1,8 @@
-package AgentesTIA;
+package Utilidades;
 
 import java.util.Scanner;
 
-public class Main {
-
-
-	
+public class Utilidades {
 	public static int crearMenu() {
 		Scanner leer = new Scanner(System.in);
 		int opcion=0;
@@ -30,42 +27,11 @@ public class Main {
 		
 		return opcion;
 	}
-	
-	public static void main(String[] args) {
-
-		System.out.println("BIENVENIDOS A LA GESTIÓN DE ESPIONAJE ADELIN_FACED");
-		System.out.println("Aquí te presentamos un menú para que elijas la opción que quieras");
-		
-		switch (crearMenu()) {
-		case 1:
-			System.out.println(mostrarListaAgentes());
-			break;
-		case 2:
-			
-			break;
-		case 3:
-			
-			break;
-		case 4:
-			
-			break;
-		case 5:
-			
-			break;
-		case 6:
-			
-			break;
-		case 7:
-			
-			break;
-		case 8:
-			
-			break;
-		default:
-			break;
+	public static void mostrarListaAgentes(AgentesTIA.Agente vAgentes[]) {
+		for (AgentesTIA.Agente a : vAgentes) {
+			System.out.println(a.toString());
 		}
+		
+		
 	}
-
-	
-
 }
