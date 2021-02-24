@@ -1,5 +1,7 @@
 package AgentesTIA;
 
+import java.util.Scanner;
+
 public class Jefazo extends Agente {
 
 	private int años_mandato;
@@ -28,6 +30,10 @@ public class Jefazo extends Agente {
 				"************************************************";
 	}
 	
-	
+	public void buscarAgentePrecio() {
+		
+		if Jefazo.
+		
+	}
 	
 }

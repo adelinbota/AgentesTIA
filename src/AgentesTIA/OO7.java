@@ -5,12 +5,12 @@ import java.util.Arrays;
 public class OO7 extends Agente {
 	
 	private int contador_bajas;
-	private String armas[] = new String[5];
+	private String armas[];
 	
-	public OO7(String nombre, int edad, String direccion, double salario, int contador_bajas, String[] armas) {
+	public OO7(String nombre, int edad, String direccion, double salario, int contador_bajas) {
 		super(nombre, edad, direccion, salario);
 		this.contador_bajas = contador_bajas;
-		this.armas = armas;
+	//	this.armas = armas;
 	}
 
 	public int getContador_bajas() {

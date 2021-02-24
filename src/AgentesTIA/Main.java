@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class Main {
 
+
+	
 	public static int crearMenu() {
 		Scanner leer = new Scanner(System.in);
 		int opcion=0;
@@ -21,6 +23,8 @@ public class Main {
 				opcion = leer.nextInt();
 			} catch (Exception e) {
 				System.out.println("Escribe un número de la lista de opciones");
+				leer = new Scanner(System.in);
+				opcion = 0;
 			}	
 		} while (opcion>8 || opcion<1);
 		

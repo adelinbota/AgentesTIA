@@ -2,24 +2,24 @@ package AgentesTIA;
 
 public class Espionaje extends Agente{
 
-	private String piso;
+	private String[] vPisos;
 
-	public Espionaje(String nombre, int edad, String direccion, double salario, String piso) {
+	public Espionaje(String nombre, int edad, String direccion, double salario) {
 		super(nombre, edad, direccion, salario);
-		this.piso = piso;
+		//this.vPisos = IODatos.cargarDatosTexto("Pisos.txt");
 	}
 
 	public String getPiso() {
-		return piso;
+		return vPisos;
 	}
 
 	public void setPiso(String piso) {
-		this.piso = piso;
+		this.vPisos = piso;
 	}
 
 	@Override
 	public String toString() {
-		return "Espionaje [" + super.toString() + ", piso=" + piso + "]";
+		return "Espionaje [" + super.toString() + ", piso=" + vPisos + "]";
 	}
 	
 	
