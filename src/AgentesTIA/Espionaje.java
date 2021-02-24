@@ -1,4 +1,5 @@
 package AgentesTIA;
+import IODatos.IODatos;
 
 public class Espionaje extends Agente{
 
@@ -6,7 +7,7 @@ public class Espionaje extends Agente{
 
 	public Espionaje(String nombre, int edad, String direccion, double salario) {
 		super(nombre, edad, direccion, salario);
-		//this.vPisos = IODatos.cargarDatosTexto("Pisos.txt");
+		this.vPisos = IODatos.cargarDatosTexto("Pisos.txt");
 	}
 
 	public String[] getPiso() {
