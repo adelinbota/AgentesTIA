@@ -9,7 +9,7 @@ public class Espionaje extends Agente{
 		//this.vPisos = IODatos.cargarDatosTexto("Pisos.txt");
 	}
 
-	public String getPiso() {
+	public String[] getPiso() {
 		return vPisos;
 	}
 

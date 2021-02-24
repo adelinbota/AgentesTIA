@@ -31,7 +31,9 @@ public class Utilidades {
 	}
 	public static void mostrarListaAgentes(Agente vAgentes[]) {
 		for (Agente a : vAgentes) {
-			System.out.println(a.toString());
+			if (!a.equals(null)) {
+				System.out.println(a.toString());
+			}		
 		}
 		
 		
@@ -40,7 +42,7 @@ public class Utilidades {
 	public static void mostrarAgentesSueldo(double sueldo, Agente vAgentes[]) {
 		
 		for (Agente a : vAgentes) {
-			if (a.getSalario()>sueldo) {
+			if (!a.equals(null) && a.getSalario()>sueldo) {
 				System.out.println(a.toString());
 			}
 		}

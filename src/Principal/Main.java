@@ -2,6 +2,7 @@ package Principal;
 
 import java.util.Scanner;
 import AgentesTIA.*;
+import Utilidades.Utilidades;
 
 
 public class Main {
@@ -19,30 +20,36 @@ public class Main {
 		vAgente[3] = new OO7("Braithwaite", 29, "C/Barcelona nº 9", 800, 5);
 		
 		
-		switch (Utilidades.Utilidades.crearMenu()) {
+		switch (Utilidades.crearMenu()) {
 		case 1:
-			Utilidades.Utilidades.mostrarListaAgentes(vAgente);
+			Utilidades.mostrarListaAgentes(vAgente);
+			Utilidades.crearMenu();
 			break;
 		case 2:
-			
+			double sueldo_buscar;
+			System.out.println("dime un sueldo y te mostrare los agentes que lo superen");
+			Scanner leer_sueldo = new Scanner(System.in);
+			sueldo_buscar = leer_sueldo.nextDouble();
+			Utilidades.mostrarAgentesSueldo(sueldo_buscar, vAgente);
+			Utilidades.crearMenu();
 			break;
 		case 3:
-			
+			Utilidades.crearMenu();
 			break;
 		case 4:
-			
+			Utilidades.crearMenu();
 			break;
 		case 5:
-			
+			Utilidades.crearMenu();
 			break;
 		case 6:
-			
+			Utilidades.crearMenu();
 			break;
 		case 7:
-			
+			Utilidades.crearMenu();
 			break;
 		case 8:
-			
+			Utilidades.crearMenu();
 			break;
 		default:
 			break;
