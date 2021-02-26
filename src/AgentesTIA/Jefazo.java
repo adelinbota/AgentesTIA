@@ -21,12 +21,12 @@ public class Jefazo extends Agente {
 
 	@Override
 	public String toString() {
-		return  "************************************************"+
-				"Nombre : " + super.getNombre() + 
-				"Edad : " + super.getEdad() +
-				"Direccion : " + super.getDireccion() +
-				"Salario : " + super.getSalario() +
-				"Años Mandato : " + años_mandato +
+		return  "************************************************\n"+
+				"Nombre : " + super.getNombre() + " \n" +
+				"Edad : " + super.getEdad() + " \n" +
+				"Direccion : " + super.getDireccion() + " \n" +
+				"Salario : " + super.getSalario() + " \n" +
+				"Años Mandato : " + años_mandato + " \n" +
 				"************************************************";
 	}
 	

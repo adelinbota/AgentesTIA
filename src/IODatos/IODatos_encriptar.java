@@ -29,9 +29,16 @@ public class IODatos_encriptar {
 			// TODO: handle exception
 		}
 	}
+	
+	public static void encriptarDatosTexto(String rutaDestino, String rutaOrigen) {
+		//leer fichero texto - guardarlo en dat - borrar fichero textgo
+		
+	}
+	
 	public static Agente[] cargarDatos(String rutaFichero) {
-		Agente[] vAg = new Agente[5];
+		Agente[] vAg = new Agente[10];
 		File f = new File(rutaFichero);
+		int pos=0;
 		if (!f.exists())
 			try {
 				f.createNewFile();
@@ -42,7 +49,8 @@ public class IODatos_encriptar {
 		try (FileInputStream fi = new FileInputStream(f);
 				ObjectInputStream oi = new ObjectInputStream(fi)){
 			while (f.canRead()) {
-				oi.readObject();	
+				vAg[pos] = (Agente) oi.readObject();
+				pos++;
 			}
 			
 			

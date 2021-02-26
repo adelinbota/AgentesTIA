@@ -8,10 +8,9 @@ import AgentesTIA.OO7;
 import IODatos.IODatos_encriptar;
 
 public class Utilidades {
-	public static int crearMenu() {
+	public static void crearMenu() {
 		Scanner leer = new Scanner(System.in);
 		int opcion=0;
-		do {
 			System.out.println("1. Ver todos los agentes con su información");
 			System.out.println("2. Ver los agentes que ganen más de una cantidad X");
 			System.out.println("3. Dar de alta un nuevo piso");
@@ -19,18 +18,7 @@ public class Utilidades {
 			System.out.println("5. Dar de alta un nuevo agente");
 			System.out.println("6. Entcriptar toda la información");
 			System.out.println("7. Desencriptar toda la información");
-			System.out.println("8. Salir");
-			
-			try {
-				opcion = leer.nextInt();
-			} catch (Exception e) {
-				System.out.println("Escribe un número de la lista de opciones");
-				leer = new Scanner(System.in);
-				opcion = 0;
-			}	
-		} while (opcion>8 || opcion<1);
-		
-		return opcion;
+			System.out.println("8. Salir");	
 	}
 	public static void mostrarListaAgentes(Agente vAgentes[]) {
 		for (Agente a : vAgentes) {
@@ -59,7 +47,7 @@ public class Utilidades {
 		for (Agente a : vAgente) {
 			Scanner leer_menu = new Scanner(System.in);
 			int cont=0;
-			if (a!=null) {
+			if (a == null) {
 				System.out.println("para crear un agente de espionaje pulse : 1");
 				System.out.println("para crear un agente de 007 pulse : 2");
 				menu = leer_menu.nextInt();
@@ -96,6 +84,8 @@ public class Utilidades {
 					break;
 
 				default:
+					System.out.println("escriba un numero valido");
+					menu = leer_menu.nextInt();
 					break;
 				}cont++;
 			}

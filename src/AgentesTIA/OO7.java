@@ -29,6 +29,11 @@ public class OO7 extends Agente {
 
 	@Override
 	public String toString() {
+		String armas="";
+		for (String s : vArmas) {
+			if (s!=null)
+				armas+=s + " ";
+		}
 		return "OO7 [ " + super.toString() + ", contador_bajas=" + contador_bajas + ", armas=" + Arrays.toString(vArmas) + "]";
 	}
 	
