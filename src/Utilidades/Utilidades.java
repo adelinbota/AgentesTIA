@@ -34,7 +34,7 @@ public class Utilidades {
 	}
 	public static void mostrarListaAgentes(Agente vAgentes[]) {
 		for (Agente a : vAgentes) {
-			if (!a.equals(null)) {
+			if (a!=null) {
 				System.out.println(a.toString());
 			}		
 		}
@@ -44,7 +44,7 @@ public class Utilidades {
 	public static void mostrarAgentesSueldo(double sueldo, Agente vAgentes[]) {
 		
 		for (Agente a : vAgentes) {
-			if (!a.equals(null) && a.getSalario()>sueldo) {
+			if (a!=null && a.getSalario()>sueldo) {
 				System.out.println(a.toString());
 			}
 		}
@@ -59,7 +59,7 @@ public class Utilidades {
 		for (Agente a : vAgente) {
 			Scanner leer_menu = new Scanner(System.in);
 			int cont=0;
-			if (a.equals(null)) {
+			if (a!=null) {
 				System.out.println("para crear un agente de espionaje pulse : 1");
 				System.out.println("para crear un agente de 007 pulse : 2");
 				menu = leer_menu.nextInt();
