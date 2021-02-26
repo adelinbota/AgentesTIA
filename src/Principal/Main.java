@@ -2,12 +2,21 @@ package Principal;
 
 import java.util.Scanner;
 import AgentesTIA.*;
+import IODatos.IODatos_encriptar;
 import Utilidades.Utilidades;
 import IODatos.*;
 
 public class Main {
 
 	
+	public static void encriptarCodigo(Agente[] vAgente) {
+		IODatos_encriptar.guardarDatos("Agentes_Encriptados.txt", vAgente);
+	}
+	
+	
+	public static void desencriptarCodigo(Agente[] vAgente) {
+		IODatos_encriptar.cargarDatos("Agentes_Encriptados.txt");
+	}
 	
 	public static void main(String[] args) {
 
@@ -42,12 +51,15 @@ public class Main {
 			Utilidades.crearMenu();
 			break;
 		case 5:
+			Utilidades.altaAgente(vAgente);
 			Utilidades.crearMenu();
 			break;
 		case 6:
+			encriptarCodigo(vAgente);
 			Utilidades.crearMenu();
 			break;
 		case 7:
+			desencriptarCodigo(vAgente);
 			Utilidades.crearMenu();
 			break;
 		case 8:

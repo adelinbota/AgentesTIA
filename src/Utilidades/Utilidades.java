@@ -5,6 +5,7 @@ import java.util.Scanner;
 import AgentesTIA.Agente;
 import AgentesTIA.Espionaje;
 import AgentesTIA.OO7;
+import IODatos.IODatos_encriptar;
 
 public class Utilidades {
 	public static int crearMenu() {
@@ -101,5 +102,11 @@ public class Utilidades {
 			
 		}
 	}
-	
+
 }
+
+
+
+
+
+
