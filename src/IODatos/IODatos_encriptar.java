@@ -2,8 +2,11 @@ package IODatos;
 
 import java.io.DataOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 
 import AgentesTIA.Agente;
 
@@ -18,9 +21,9 @@ public class IODatos_encriptar {
 				e.printStackTrace();
 			}
 		try (FileOutputStream fo = new FileOutputStream(f);
-			DataOutputStream dou = new DataOutputStream(fo)){
-			for (Agente agente : datos) {
-				
+			ObjectOutputStream ou = new ObjectOutputStream(fo)){
+			for (Agente a : datos) {
+				ou.writeObject(a);
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -36,8 +39,12 @@ public class IODatos_encriptar {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		try (FileOutputStream fo = new FileOutputStream(f);
-				DataOutputStream dou = new DataOutputStream(fo)){
+		try (FileInputStream fi = new FileInputStream(f);
+				ObjectInputStream oi = new ObjectInputStream(fi)){
+			while (f.canRead()) {
+				oi.readObject();	
+			}
+			
 			
 		} catch (Exception e) {
 			// TODO: handle exception
