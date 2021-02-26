@@ -88,6 +88,7 @@ public class Utilidades {
 					menu = leer_menu.nextInt();
 					break;
 				}cont++;
+				break;
 			}
 			
 		}

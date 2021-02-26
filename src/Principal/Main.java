@@ -26,11 +26,12 @@ public class Main {
 		Scanner leer_menu = new Scanner(System.in);
 		System.out.println("BIENVENIDOS A LA GESTIÓN DE ESPIONAJE ADELIN_FACED");
 		System.out.println("Aquí te presentamos un menú para que elijas la opción que quieras");
-		Agente vAgente[] = new Agente[10];
+		/*Agente vAgente[] = new Agente[10];
 		vAgente[0] = new Jefazo("Luis Suarez", 34, "C/Neptuno nº 9", 3500, 10);
 		vAgente[1] = new Espionaje("Vinicius JR", 20, "C/Cibeles nº 20", 950);
 		vAgente[2] = new OO7("Haaland", 20, "C/Dortmund nº 9", 1500, 25);
-		vAgente[3] = new OO7("Braithwaite", 29, "C/Barcelona nº 9", 800, 5);
+		vAgente[3] = new OO7("Braithwaite", 29, "C/Barcelona nº 9", 800, 5);*/
+		Agente vAgente[] = IODatos_encriptar.cargarDatos("Agentes_Encriptados.dat");
 		Utilidades.crearMenu();
 		menu = leer_menu.nextInt();
 		while (menu != 8) {

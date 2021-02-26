@@ -34,7 +34,7 @@ public class OO7 extends Agente {
 			if (s!=null)
 				armas+=s + " ";
 		}
-		return "OO7 [ " + super.toString() + ", contador_bajas=" + contador_bajas + ", armas=" + Arrays.toString(vArmas) + "]";
+		return "OO7 " + super.toString() + ", contador_bajas=" + contador_bajas + ", armas=" + armas;
 	}
 	
 	

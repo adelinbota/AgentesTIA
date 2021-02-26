@@ -13,10 +13,16 @@ public class Espionaje extends Agente{
 	public String[] getPiso() {
 		return vPisos;
 	}
-
+	
 	@Override
+
 	public String toString() {
-		return "Espionaje [" + super.toString() + ", piso=" + vPisos + "]";
+		String pisos="";
+		for (String s : vPisos) {
+			if (s!=null)
+				pisos+=s + " ";
+		}
+		return "Espionaje " + super.toString() + ", piso=" + pisos;
 	}
 	
 	
