@@ -68,6 +68,7 @@ public class Main {
 				break;
 			case 6:
 				encriptarCodigo(vAgente);
+				IODatos_encriptar.encriptarDatosTexto("Agentes_Encriptados.dat", "Agentes_Encriptados.dat");
 				Utilidades.crearMenu();
 				menu = leer_menu.nextInt();
 				break;

@@ -32,7 +32,20 @@ public class IODatos_encriptar {
 	
 	public static void encriptarDatosTexto(String rutaDestino, String rutaOrigen) {
 		//leer fichero texto - guardarlo en dat - borrar fichero textgo
-		
+		File f = new File(rutaDestino);
+		if (!f.exists())
+			try {
+				f.createNewFile();
+			} catch (Exception e) {
+				// TODO: handle exception
+				e.printStackTrace();
+			}
+		try (FileInputStream fi = new FileInputStream(f);
+				ObjectInputStream oi = new ObjectInputStream(fi)){
+				oi.readUTF();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 	}
 	
 	public static Agente[] cargarDatos(String rutaFichero) {
