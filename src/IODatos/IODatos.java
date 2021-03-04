@@ -72,10 +72,11 @@ import AgentesTIA.*;
 			
 		}
 
-		public static ArrayList<String> cargarDatosTexto(String rutaFichero) {
-			ArrayList<String> vArma = new ArrayList<String>();
-			ArrayList<String> vPiso = new ArrayList<String>();
-			ArrayList<String> vDatos = new ArrayList<String>();
+		public static String[] cargarDatosTexto(String rutaFichero) {
+			String vArma[] = new String[10];
+			String vPiso[] = new String[10];
+			String vDatos[] = new String[10];
+			int cont=0;
 			File f = new File(rutaFichero);
 			if (!f.exists()) {
 				try {
@@ -90,7 +91,8 @@ import AgentesTIA.*;
 				Scanner leer = new Scanner(fr)){
 				
 				while (leer.hasNext()) {
-					vDatos.add(leer);
+					vDatos[cont] = leer.nextLine();
+					cont++;
 				}
 				
 			} catch (FileNotFoundException e) {

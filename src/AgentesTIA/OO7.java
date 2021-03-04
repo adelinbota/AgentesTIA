@@ -7,7 +7,7 @@ import IODatos.IODatos;
 public class OO7 extends Agente {
 	
 	private int contador_bajas;
-	private ArrayList<String> vArmas;
+	private String[] vArmas;
 	
 	public OO7(String nombre, int edad, String direccion, double salario, int contador_bajas) {
 		super(nombre, edad, direccion, salario);
@@ -23,7 +23,7 @@ public class OO7 extends Agente {
 		this.contador_bajas = contador_bajas;
 	}
 
-	public ArrayList<String> getArmas() {
+	public String[] getArmas() {
 		return vArmas;
 	}
 
