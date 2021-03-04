@@ -21,7 +21,12 @@ public class Main {
 	}
 	
 	public static void main(String[] args) {
-
+/**
+ * 
+ * @author daw-B
+ * @version 04/03/2021/A
+ * 
+ */
 		int menu = 0;
 		Scanner leer_menu = new Scanner(System.in);
 		System.out.println("BIENVENIDOS A LA GESTIÓN DE ESPIONAJE ADELIN_FACED");
@@ -92,3 +97,4 @@ public class Main {
 
 }
 //Este es un comentario para comenzar la documentación con Ángel
+
