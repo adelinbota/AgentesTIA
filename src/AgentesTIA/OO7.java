@@ -1,12 +1,13 @@
 package AgentesTIA;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import IODatos.IODatos;
 
 public class OO7 extends Agente {
 	
 	private int contador_bajas;
-	private String vArmas[];
+	private ArrayList<String> vArmas;
 	
 	public OO7(String nombre, int edad, String direccion, double salario, int contador_bajas) {
 		super(nombre, edad, direccion, salario);
@@ -22,7 +23,7 @@ public class OO7 extends Agente {
 		this.contador_bajas = contador_bajas;
 	}
 
-	public String[] getArmas() {
+	public ArrayList<String> getArmas() {
 		return vArmas;
 	}
 
