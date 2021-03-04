@@ -96,5 +96,8 @@ public class Main {
 	
 
 }
+<<<<<<< HEAD
 //Este es un comentario para comenzar la documentación con Ángel
 
+=======
+>>>>>>> main

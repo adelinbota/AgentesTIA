@@ -12,6 +12,7 @@ import java.io.IOException;
 	import java.io.ObjectInputStream;
 	import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import javax.print.attribute.HashPrintRequestAttributeSet;
@@ -72,9 +73,9 @@ import AgentesTIA.*;
 		}
 
 		public static String[] cargarDatosTexto(String rutaFichero) {
-			String[] vArma = new String[10];
-			String[] vPiso = new String[10];
-			String[] vDatos = new String[10];
+			String vArma[] = new String[10];
+			String vPiso[] = new String[10];
+			String vDatos[] = new String[10];
 			int cont=0;
 			File f = new File(rutaFichero);
 			if (!f.exists()) {
