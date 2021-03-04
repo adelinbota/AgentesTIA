@@ -12,6 +12,7 @@ import java.io.IOException;
 	import java.io.ObjectInputStream;
 	import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import javax.print.attribute.HashPrintRequestAttributeSet;
@@ -71,11 +72,10 @@ import AgentesTIA.*;
 			
 		}
 
-		public static String[] cargarDatosTexto(String rutaFichero) {
-			String[] vArma = new String[10];
-			String[] vPiso = new String[10];
-			String[] vDatos = new String[10];
-			int cont=0;
+		public static ArrayList<String> cargarDatosTexto(String rutaFichero) {
+			ArrayList<String> vArma = new ArrayList<String>();
+			ArrayList<String> vPiso = new ArrayList<String>();
+			ArrayList<String> vDatos = new ArrayList<String>();
 			File f = new File(rutaFichero);
 			if (!f.exists()) {
 				try {
@@ -90,8 +90,7 @@ import AgentesTIA.*;
 				Scanner leer = new Scanner(fr)){
 				
 				while (leer.hasNext()) {
-					vDatos[cont] = leer.nextLine();
-					cont++;
+					vDatos.add(leer);
 				}
 				
 			} catch (FileNotFoundException e) {
