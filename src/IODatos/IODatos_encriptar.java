@@ -9,8 +9,17 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 import AgentesTIA.Agente;
-
+/**
+ * Clase dirida a encriptar los datos relacionados a los agentes
+ * @author adelinfaced
+ *
+ */
 public class IODatos_encriptar {
+	/**
+	 * Método que sirve para guardar los datos en un nuevo fichero
+	 * @param rutaFichero. Parámetro que muestra la ruta del fichero y su extensión
+	 * @param datos.
+	 */
 	public static void guardarDatos(String rutaFichero, Agente[] datos) {
 		File f = new File(rutaFichero);
 		if(!f.exists())
@@ -29,7 +38,11 @@ public class IODatos_encriptar {
 			// TODO: handle exception
 		}
 	}
-	
+	/**
+	 * Método que sirve para encriptar y leer el fichero.
+	 * @param rutaDestino. Parámetro que designa la ruta del archivo de destino
+	 * @param rutaOrigen. Parámetro que designa la ruta del archivo de origen
+	 */
 	public static void encriptarDatosTexto(String rutaDestino, String rutaOrigen) {
 		//leer fichero texto - guardarlo en dat - borrar fichero textgo
 		File f = new File(rutaDestino);
@@ -47,7 +60,11 @@ public class IODatos_encriptar {
 			// TODO: handle exception
 		}
 	}
-	
+	/**
+	 * Método que sirve para cargar los datos y desencriptarlos
+	 * @param rutaFichero. Parámetro que muestra la ruta del fichero y su extensión
+	 * @return. Devuelve los datos del vector de Agente creado
+	 */
 	public static Agente[] cargarDatos(String rutaFichero) {
 		Agente[] vAg = new Agente[10];
 		File f = new File(rutaFichero);

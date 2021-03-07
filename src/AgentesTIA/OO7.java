@@ -3,7 +3,12 @@ package AgentesTIA;
 import java.util.ArrayList;
 import java.util.Arrays;
 import IODatos.IODatos;
-
+/**
+ * 
+ * Clase hijo llamada OO7 que guarda y muestra los Agentes de OO7
+ * @author adelinfaced
+ *
+ */
 public class OO7 extends Agente {
 	
 	private int contador_bajas;

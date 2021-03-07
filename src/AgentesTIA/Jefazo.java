@@ -1,7 +1,11 @@
 package AgentesTIA;
 
 import java.util.Scanner;
-
+/**
+ * Esta clase es la que guarda al jefe de todos los agentes y lo muestra por pantalla
+ * @author adelinfaced
+ *
+ */
 public class Jefazo extends Agente {
 
 	private int años_mandato;

@@ -8,6 +8,9 @@ import AgentesTIA.OO7;
 import IODatos.IODatos_encriptar;
 
 public class Utilidades {
+	/**
+	 * Este es el menú principal de la agencia.
+	 */
 	public static void crearMenu() {
 		Scanner leer = new Scanner(System.in);
 		int opcion=0;
@@ -20,6 +23,10 @@ public class Utilidades {
 			System.out.println("7. Desencriptar toda la información");
 			System.out.println("8. Salir");	
 	}
+	/**
+	 * Método que sirve para mostrar los agentes por pantalla
+	 * @param vAgentes. Este parámetro guarda los agentes del vector
+	 */
 	public static void mostrarListaAgentes(Agente vAgentes[]) {
 		for (Agente a : vAgentes) {
 			if (a!=null) {
@@ -29,6 +36,11 @@ public class Utilidades {
 		
 		
 	}
+	/**
+	 * Método que sirve para mostrar los agentes que ganan más de x por pantalla
+	 * @param sueldo. Este parámetro muestra el salario de los agentes
+	 * @param vAgentes. Este parámetro guarda los agentes del vector
+	 */
 	public static void mostrarAgentesSueldo(double sueldo, Agente vAgentes[]) {
 		
 		for (Agente a : vAgentes) {
@@ -38,6 +50,10 @@ public class Utilidades {
 		}
 		
 	}
+	/**
+	 * Método que sirve para dar de alta a un nuevo agente
+	 * @param vAgente. Este parámetro guarda los agentes del vector
+	 */
 	public static void altaAgente(Agente vAgente[]) {
 		System.out.println("Introduciremos un nuevo agente");
 		int menu=0;

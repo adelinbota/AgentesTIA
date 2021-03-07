@@ -8,25 +8,31 @@ import IODatos.*;
 
 public class Main {
 
-	
+	/**
+	 * Método que sirve para encriptar los datos guardados en un archivo
+	 * @param vAgente. Este parámetro guarda los agentes del vector
+	 */
 	public static void encriptarCodigo(Agente[] vAgente) {
 		IODatos_encriptar.guardarDatos("Agentes_Encriptados.dat", vAgente);
 		System.out.println("TOP SECRET");
 	}
 	
-	
+	/**
+	 * Método que sirve para desencriptar los datos guardados en un archivo
+	 * @param vAgente. Este parámetro guarda los agentes del vector
+	 */
 	public static void desencriptarCodigo(Agente[] vAgente) {
 		IODatos_encriptar.cargarDatos("Agentes_Encriptados.dat");
 		System.out.println("NO SECRET");
 	}
+	/**
+	 * @author adelinfaced
+	 *
+	 * 
+	 */
 	
 	public static void main(String[] args) {
-/**
- * 
- * @author daw-B
- * @version 04/03/2021/A
- * 
- */
+
 		int menu = 0;
 		Scanner leer_menu = new Scanner(System.in);
 		System.out.println("BIENVENIDOS A LA GESTIÓN DE ESPIONAJE ADELIN_FACED");
@@ -90,14 +96,10 @@ public class Main {
 			}
 		}
 			
-		}
+	}
+
 		
 
 	
 
 }
-<<<<<<< HEAD
-//Este es un comentario para comenzar la documentación con Ángel
-
-=======
->>>>>>> main

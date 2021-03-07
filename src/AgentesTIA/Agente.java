@@ -3,7 +3,11 @@ package AgentesTIA;
 import java.io.Serializable;
 
 //clase padre de Jefazo, Espionaje y 007
-
+/**
+ * Clase padre llamada Agente
+ * @author adelinfaced
+ *
+ */
 public class Agente implements Serializable{
 
 	protected String nombre;

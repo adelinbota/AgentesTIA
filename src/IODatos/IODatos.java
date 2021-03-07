@@ -19,7 +19,10 @@ import javax.print.attribute.HashPrintRequestAttributeSet;
 
 import AgentesTIA.*;
 	public class IODatos {
-
+		/**
+		 * Método que sirve para guardar nuevos datos sobre armas y pisos y escribirlas en el fichero
+		 * @param rutaFichero. Parámetro que muestra la ruta del fichero y su extensión
+		 */
 		public static void guardarDatosTexto(String rutaFichero) {
 			
 			File f = new File(rutaFichero);
@@ -71,7 +74,11 @@ import AgentesTIA.*;
 			}
 			
 		}
-
+		/**
+		 * Método que sirve para guardar los datos de las armas y los pisos y escribirlos en un fichero
+		 * @param rutaFichero. Parámetro que muestra la ruta del fichero y su extensión
+		 * @return. Devuelve los datos del vector de Agente creado
+		 */
 		public static String[] cargarDatosTexto(String rutaFichero) {
 			String vArma[] = new String[10];
 			String vPiso[] = new String[10];

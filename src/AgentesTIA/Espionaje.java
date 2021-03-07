@@ -2,7 +2,11 @@ package AgentesTIA;
 import java.util.ArrayList;
 
 import IODatos.IODatos;
-
+/**
+ * Clase hijo llamada Espionaje que guarda y muestra los Agentes de espionaje
+ * @author adelinfaced
+ *
+ */
 public class Espionaje extends Agente{
 
 	private String[] vPisos = new String[10];
