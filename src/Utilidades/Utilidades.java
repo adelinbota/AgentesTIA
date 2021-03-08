@@ -1,5 +1,6 @@
 package Utilidades;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import AgentesTIA.Agente;
@@ -41,13 +42,16 @@ public class Utilidades {
 	 * @param sueldo. Este parámetro muestra el salario de los agentes
 	 * @param vAgentes. Este parámetro guarda los agentes del vector
 	 */
-	public static void mostrarAgentesSueldo(double sueldo, Agente vAgentes[]) {
-		
+	public static ArrayList<Agente> mostrarAgentesSueldo(double sueldo, Agente vAgentes[]) {
+		ArrayList<Agente> vA = null;
 		for (Agente a : vAgentes) {
 			if (a!=null && a.getSalario()>sueldo) {
 				System.out.println(a.toString());
+				vA.add(a);
 			}
+
 		}
+		return vA;
 		
 	}
 	/**

@@ -79,7 +79,7 @@ import AgentesTIA.*;
 		 * @param rutaFichero. Parámetro que muestra la ruta del fichero y su extensión
 		 * @return. Devuelve los datos del vector de Agente creado
 		 */
-		public static String[] cargarDatosTexto(String rutaFichero) {
+		public static Agente[] cargarDatosTexto(String rutaFichero) {
 			String vArma[] = new String[10];
 			String vPiso[] = new String[10];
 			String vDatos[] = new String[10];
